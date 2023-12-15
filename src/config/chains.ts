@@ -7,12 +7,15 @@ import {
   celo,
   classic,
   confluxESpace,
+  coreDao,
+  cronos,
   eos,
   fantom,
   filecoin,
   gnosis,
   linea,
   mainnet,
+  mantle,
   neonMainnet,
   okc,
   opBNB,
@@ -66,11 +69,55 @@ export const ethw = defineChain({
   },
 });
 
+export const kcc = defineChain({
+  id: 321,
+  name: "KCC Mainnet",
+  network: "KCC Mainnet",
+  nativeCurrency: {
+    decimals: 18,
+    name: "KCS",
+    symbol: "KCS",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://kcc-rpc.com"],
+    },
+    public: {
+      http: ["https://kcc-rpc.com"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "Explorer", url: "https://explorer.kcc.io/en" },
+  },
+});
+
+export const mapo = defineChain({
+  id: 22776,
+  name: "MAP Mainnet",
+  network: "MAP Mainnet",
+  nativeCurrency: {
+    decimals: 18,
+    name: "MAPO",
+    symbol: "MAPO",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://rpc.maplabs.io"],
+    },
+    public: {
+      http: ["https://rpc.maplabs.io"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "Explorer", url: "https://mapscan.io" },
+  },
+});
+
 export const inscriptionChains = {
   eth: mainnet,
   bsc,
   opBNB,
-  okc,
+  // okc,
   polygon,
   fantom,
   avalanche,
@@ -79,6 +126,11 @@ export const inscriptionChains = {
   base,
   zkSync,
   classic,
+  mantle,
+  mapo,
+  cronos,
+  kcc,
+  coreDao,
   ethw,
   eos,
   neonMainnet,
